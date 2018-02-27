@@ -4,7 +4,7 @@
 
 
 
-	if(jQuery(".wpcf7c-elm-step1").size() != 0) {
+	if(jQuery(".wpcf7c-elm-step1").length != 0) {
 		// 対象有り
 
 		jQuery(".wpcf7c-elm-step1").each(function(){
@@ -167,7 +167,7 @@ var wpcf7c_scroll = function(unit_tag) {
 			var parent = jQuery(this).parents("form");
 			var speed = 1000;
 			var position = parent.offset().top;
-			if(jQuery('.wpcf7c-anchor').size() != 0) {
+			if(jQuery('.wpcf7c-anchor').length != 0) {
 				position = jQuery('.wpcf7c-anchor').offset().top;
 			}
 			jQuery("html, body").animate({scrollTop:position}, speed, "swing");
@@ -192,7 +192,7 @@ var wpcf7c_step2 = function(unit_tag){
 			wpcf7c_to_step1(parent);
 
 			// step3の要素があれば、それに切り替える
-			if(parent.find(".wpcf7c-elm-step3").size() != 0) {
+			if(parent.find(".wpcf7c-elm-step3").length != 0) {
 				// 表示切替
 				parent.find(".wpcf7c-elm-step1").addClass("wpcf7c-force-hide");
 				parent.find(".wpcf7c-elm-step2").addClass("wpcf7c-force-hide");
@@ -228,4 +228,3 @@ document.addEventListener( 'wpcf7submit', function( event ) {
 
 	}
 }, false );
-
